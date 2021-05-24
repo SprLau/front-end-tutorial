@@ -70,5 +70,27 @@ Expectedly, **Chrome browser** and **VSCode code editor** will open immediately.
 
 NOW, all the work pertaining environment preparation have been done.
 
+### Verse 2 - What is Git, Seriously?
 
+Git’s slogan is:
 
+**"Everything is local."**
+
+And it is not bluffing.
+
+You can regard it as if there is a remote servant who is handling your codes, and you can always tell the guy to store or fetch your codes. So can your friends, unless they are not permitted by you. Sounds like a bank or something, huh? This is good, because you can collaborate while don’t have to worry about losing your codes somehow.
+
+There are several frequently used **Git** commands:
+
+```bash
+git add .
+git commit -a -m "some information to mark this commit"
+
+git push -u origin master#branch
+
+git pull
+```
+
+First two always work together, they are to commit local changes but without pushing them. The third is to push your local changes to the remote server, where you can store your code and fetch from. The fourth is to pull from the remote server, which you can update your local codes to the remote server.
+
+Though all of these we’ve discussed, there is definitely still a lot that we cannot quite understand, like `-a`, or `origin`, `master`. But don’t worry, we’ll get into them later on in our practices.
