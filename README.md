@@ -1,7 +1,5 @@
 # Front End Tutorial
 
-[toc]
-
 ## Chapter 1 HTML
 
 ### Verse 1 - Environment Preparation
@@ -72,6 +70,8 @@ Expectedly, **Chrome browser** and **VSCode code editor** will open immediately.
 
 NOW, all the work pertaining environment preparation have been done.
 
+
+
 ### Verse 2 - What is Git, Seriously?
 
 Git’s slogan is:
@@ -96,6 +96,8 @@ git pull
 First two always work together, they are to commit local changes but without pushing them. The third is to push your local changes to the remote server, where you can store your code and fetch from. The fourth is to pull from the remote server, which you can update your local codes to the remote server.
 
 Though all of these we’ve discussed, there is definitely still a lot that we cannot quite understand, like `-a`, or `origin`, `master`. But don’t worry, we’ll get into them later on in our practices.
+
+
 
 ### Verse 3 - Write your first `.html`
 
@@ -167,6 +169,8 @@ This declares a link, any link, on which click to visit.
 
 ***Try yourself!!!***
 
+
+
 ### Verse 4 - What if I want to add some pics?
 
 ```html
@@ -220,6 +224,8 @@ Quite weird, right? Why Punggaw Cat is so flat??? So, if you want to keep the **
 > ![3](img/3.png)
 >
 > The size is normal. So big… I can’t even cut the whole page.
+
+
 
 ### Verse 5 - What is an *Attribute*?
 
