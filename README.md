@@ -278,3 +278,273 @@ All HTML elements can have **attributes**:
 - The `style` attribute is used to add styles to an element, such as color, font, size, and more
 - The `lang` attribute of the `<html>` tag declares the language of the Web page
 - The `title` attribute defines some extra information about an element
+
+
+
+### Verse 6 - Headings
+
+Remember that `<h1></h1>` element? That’s the first type of headings.
+
+In total, there are 6 kinds of headings:
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+
+These headings help to keep a website in a good shape, logically. Imagine a book’s catalog.
+
+As we know, the default sizes of these headings is settled; what if I want to make `<h1></h1>` smaller and `<h6></h6>` larger?
+
+The answer is, again, attributes.
+
+We can simply add a **style** attribute to a heading:
+
+```html
+<h1 style="font-size:5px;">Heading 1</h1>
+```
+
+Now let‘s add this to our code:
+
+```html
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SprLau's Web Design Learning</title>
+    </head>
+
+    <body>
+        <h1>About Me</h1>
+        <p>I am a junior year student majoring in computer science.</p>
+        <p>To know more about me, please search on <a href="http://www.baidu.com">Baidu</a>.</p>
+        <p>This is my favorite cat:</p>
+        <img src="./../img/cat.jpg", alt="Punggaw Cat!!!", width="225" height="272">
+        <p title="My Favorite Color" style="color:#B4C5D8;">My favorite color is iceberg blue.</p>
+
+        <h1 style="font-size:5px;">Education</h1>
+    </body>
+</html>
+```
+
+> ![7](img/7.png)
+>
+> Here, 👆, quite small huh, but this is what we want: to make a heading 1 smaller.
+
+
+
+### Verse 7 - Paragraphs
+
+We’ve touched this as well. `<p></p>` declares things between it are paragraphs.
+
+Previously, we only have 1 sentence in a paragraph; however, what if we want to add several sentences to it? Like:
+
+```
+Beihang University, 
+School of Computer Science and Engineering, 
+Bachlor of Engineering.
+```
+
+Maybe we could:
+
+```html
+<p>
+        Beihang University, 
+        School of Computer Science and Engineering, 
+        Bachelor of Engineering.
+</p>
+```
+
+However, if we do this, you’ll surprisingly notice that the line feed we want disappears:
+
+![8](img/8.png)
+
+Why is this?
+
+The reason is that *HTML* will automatically remove any extra spaces and lines when the page is displayed.
+
+So, is there any solution to this problem? Of course! Just append a `<br>`, this is the short for **break**, to every place we want a line feed:
+
+```html
+<p>
+        Beihang University, <br>
+        School of Computer Science and Engineering, <br>
+        Bachelor of Engineering.
+</p>
+```
+
+Now we get what we want:
+
+![9](img/9.png)
+
+You can also use `<pre></pre>` to do this job. The text inside a `<pre>` element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+
+```html
+<pre>
+        Beihang University, 
+        School of Computer Science and Engineering, 
+        Bachelor of Engineering.
+</pre>
+```
+
+>  This is what it looks like:
+>
+> ![image-20210919121027231](../../../Library/Application Support/typora-user-images/image-20210919121027231.png)
+>
+> Quite strange, so not recommended.
+
+
+
+### Verse 8 - Styles
+
+Totally, we can add 5 styles to any text element:
+
+- Use `background-color` for background color
+- Use `color` for text colors
+- Use `font-family` for text fonts
+- Use `font-size` for text sizes
+- Use `text-align` for text alignment
+- Use `font-weight` for bold
+
+We can add only one or two of them; we can also add several, even all of them:
+
+```html
+<p style="background-color: #C3C4C7; color: #FF0000; font-family: Courier; font-size:20px; text-align:center; font-weight:bold">
+    I am currently in my junior year.
+</p>
+```
+
+> The look should be like:
+>
+> ![10](img/10.png)
+
+
+
+### Verse 9 - Formatting
+
+Remember we used the attribute `font-weight` to declare a **bold** text?
+
+Is there any method that is more straightforward? The answer is yes. Actually, there a many text formats that can be given in a straightforward way, and we consider every of them a distinct element:
+
+- `<b>` - Bold text
+- `<strong>` - Important text
+- `<i>` - Italic text
+- `<em>` - Emphasized text
+- `<mark>` - Marked text
+- `<small>` - Smaller text
+- `<del>` - Deleted text
+- `<ins>` - Inserted text
+- `<sub>` - Subscript text
+- `<sup>` - Superscript text
+
+Here is an example:
+
+```html
+<p>
+    My research interests mainly are: <br>
+    <b>Visual Compuring</b>: <em>Vision & Graphics</em><br>
+    <i>Human-computer Interaction</i>: <strong>Text Entry & User Interface</strong><br>
+    Besides, I am seeking for <mark>intern opportunities</mark>.<br>
+    <small>You can reach me via email</small>: lau@buaa.edu.cn<br>
+    I am also a <del>qualified sleeper</del> and <ins>an amatuer musician</ins>.<br>
+    My <sub>love for life</sub>: <sup>PungGaw</sup>!!!
+</p>
+```
+
+> It should look like this:
+>
+> ![11](img/11.png)
+
+
+
+### Verse 10 - Quotation and Citation Elements
+
+We will go through the `<blockquote>`,`<q>`, `<abbr>`, `<address>`, `<cite>`, and `<bdo>` HTML elements in this verse.
+
+`<blockquote></blockquote>` contains a long quotation. Like this:
+
+```html
+<blockquote>
+ 	The unique fame that Leonardo enjoyed in his lifetime and that, filtered by historical criticism, has remained undimmed to the present day rests largely on his unlimited desire for knowledge, which guided all his thinking and behaviour. An artist by disposition and endowment, he considered his eyes to be his main avenue to knowledge; to Leonardo, sight was man’s highest sense because it alone conveyed the facts of experience immediately, correctly, and with certainty.
+</blockquote>
+```
+
+> This looks like:
+>
+> ![12](img/12.png)
+
+We can also quote a relatively short sentence like this:
+
+```html
+<p>My goal is to: <q>Bridge the gap between technology and human.</q></p>
+```
+
+This will automatically add quotation marks:
+
+![13](img/13.png)
+
+`<abbr></abbr>` declares an abbreviation. Marking abbreviations can give useful information to browsers, translation systems and search-engines:
+
+```html
+<p><abbr title="Human-computer Interaction">HCI</abbr> is my favorite field.</p>
+```
+
+![14](img/14.png)
+
+Like the title attribute we talked about earlier, put your mouse onto it then the full name would be shown.
+
+`<address></address>` defines an address. The contact information can be an email address, URL, physical address, phone number, social media handle, etc.
+
+```html
+<address>
+    Beihang University, <br>
+    37, Xueyuan Rd. <br>
+    Beijing, CN
+</address>
+```
+
+![15](img/15.png)
+
+Then, the HTML `<cite>` tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+
+```html
+<p>My favorite book: <cite>The Godfather</cite> by Mario Puzo.</p>
+```
+
+![16](img/16.png)
+
+Lastly, and this may be useless in most of the circumstances, but what we know can’t hurt us, right? Here we discuss `<bdo></bdo>`. BDO stands for Bi-Directional Override.
+
+```html
+<bdo dir="rtl">This text will be written from right to left</bdo>
+```
+
+![17](img/17.png)
+
+The `dir` attribute stands for *right to left*.
+
+
+
+### Verse 11 - Comments
+
+If you want to add some annotations, or notes, just add a comment like this:
+
+```html
+<!-- This is a comment -->
+```
+
+Computers pay no attention to comments; comments are there for human to have a better understanding of the code.
+
+For example:
+
+```html
+<bdo dir="rtl">This text will be written from right to left</bdo>
+<!-- bdo stands for Bi-directional override, and rtl means right to left -->
+```
+
+You can have a better understanding from this comment, and the computer would pay no attention to it.
+
