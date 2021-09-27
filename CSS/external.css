@@ -1,0 +1,14 @@
+p {
+    color: blue;
+    background-color: bisque;
+    border: 3px solid red;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+}

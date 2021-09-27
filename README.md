@@ -548,3 +548,91 @@ For example:
 
 You can have a better understanding from this comment, and the computer would pay no attention to it.
 
+
+
+### Verse 12 - Color
+
+You can set a color for text and its background and border, plaily and simply.
+
+Here we use a `<p></p>` (paragraph) to demonstrate this:
+
+```html
+<p style="color: blueviolet; background-color: cyan; border: 5px solid yellow;">Try some colors.</p>
+```
+
+> ![18](img/18.png)
+
+
+
+### Verse 13 - CSS
+
+HTML defines what a website contains, while CSS defines how the contents look like. Consider it as a decoration. Typically, we have internal CSS and external CSS. Internal means coding the CSS and the HTML in the same `.html` file; however, we all are used to code the CSS in an external, seperate `.css` file.
+
+We can include a `.css` file to an `.html` with:
+
+```html
+<link rel="stylesheet" href="THE_LINK_OF_A_CSS">
+```
+
+where `rel="stylesheet"` means it is a “**style sheet file**”, a.k.a. CSS; `href` has the same meaning as we’ve learnt: defining a link.
+
+Let me demonstrate by actually making a site:
+
+![19](img/19.png)
+
+The `.html` of it is supposed to be written first, since contents count most:
+
+```html
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel=" stylesheet" href="../CSS/external.css">
+        <!-- We will get to this external.css later -->
+        
+        <title>Using External CSS</title>
+    </head>
+
+    <body>
+        <h1>Breaking News</h1>
+        <p>Today, CDC Director Rochelle P. Walensky, M.D., M.P.H., endorsed the CDC Advisory Committee on Immunization Practices’ (ACIP) recommendation for a booster shot of the Pfizer-BioNTech COVID-19 vaccine in certain populations and also recommended a booster dose for those in high risk occupational and institutional settings. The Food and Drug Administration’s (FDA) authorization and CDC’s guidance for use are important steps forward as we work to stay ahead of the virus and keep Americans safe.
+        </p>
+    </body>
+</html>
+```
+
+> If you open the `.html` file now, you’ll see some plain texts:
+>
+> ![20](img/20.png)
+
+Now let’s write a `.css` for it, here we create the file in `../CSS/` as `external.css` (`..` means the parent of the current directory):
+
+```css
+p {
+    color: blue;
+    background-color: bisque;
+    border: 3px solid red;
+    padding: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+}
+```
+
+See, a `.css` file is simple. Frankly list everything and you get it.
+
+Now that we have already included the `.css` file by `<link rel=" stylesheet" href="../CSS/external.css">` in the `.html` file, we are done!
+
+Try to examine the page by clicking on `using_external_css.html` (*not on GitHub but from local disk):
+
+![19](img/19.png)
+
+So, CSS really is a powerful tool especially when we have **static** styles for each element. Using external CSSes to define the style is also industrially-expected, so get used to it.
+
+
+
