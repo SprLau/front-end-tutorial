@@ -632,7 +632,7 @@ Try to examine the page by clicking on `using_external_css.html` (*not on GitHub
 
 ![19](img/19.png)
 
-So, CSS really is a powerful tool especially when we have **static** styles for each element. Using external CSSes to define the style is also industrially-expected, so get used to it.
+So, CSS really is a powerful tool especially when we have **static** styles for each element. Using external CSSes to define the style is also industrially-expected, so get used to it. Now that this is only a **first glance** of CSS, we will learn more thoroughly about it when we finish HTML.
 
 
 
