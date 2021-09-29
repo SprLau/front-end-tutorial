@@ -393,9 +393,9 @@ You can also use `<pre></pre>` to do this job. The text inside a `<pre>` element
 
 >  This is what it looks like:
 >
-> ![image-20210919121027231](../../../Library/Application Support/typora-user-images/image-20210919121027231.png)
+>  ![image-20210919121027231](../../../Library/Application Support/typora-user-images/image-20210919121027231.png)
 >
-> Quite strange, so not recommended.
+>  Quite strange, so not recommended.
 
 
 
@@ -636,3 +636,134 @@ So, CSS really is a powerful tool especially when we have **static** styles for 
 
 
 
+### Verse 14 - Links
+
+Websites are all about links, so it must be understood. 
+
+```html
+<a href="URL">LINK_TEXT</a>
+```
+
+The most important attribute of the `<a>` element is the `href` attribute, which indicates the link's destination. The *link text* is the part that will be visible to the reader. Clicking on the link text, will send the reader to the specified URL address.
+
+And you may have encountered situations like opening a website that wipes out your currently reading one, making you have to go back and click the right button to make it open in a new tab. Quite inconvenient! So, we have an attribute here `target`: 
+
+The `target` attribute can have one of the following values:
+
+- `_self` - Default. Opens the document in the same window/tab as it was clicked
+- `_blank` - Opens the document in a new window or tab
+- `_parent` - Opens the document in the parent frame
+- `_top` - Opens the document in the full body of the window
+
+An example:
+
+```html
+<a href="https://sprlau.github.io/" target="_blank">Visit SprLau's Site!</a>
+```
+
+Try this in the [index.html](./HTML/index.html).
+
+You can also make an image that can be clicked to visit a link.
+
+```html
+<a href="https://sprlau.github.io/" target="_blank">
+	<img src="./../img/21.png" alt="SprLau's Site" style="transform: scale(0.4)">
+</a>
+```
+
+What if you want to send an E-mail?
+
+```html
+<a href="mailto:lau@buaa.edu.cn" target="_blank">Send SprLau a mail!</a>
+```
+
+#### Summary
+
+- Use the `<a>` element to define a link
+- Use the `href` attribute to define the link address
+- Use the `target` attribute to define where to open the linked document
+- Use the `<img>` element (inside `<a>`) to use an image as a link
+- Use the `mailto:` scheme inside the `href` attribute to create a link that opens the user's email program
+
+
+
+### Verse 15 - Block and Inline
+
+Every HTML element has a default display value, depending on what type of element it is.
+
+There are two display values: block and inline.
+
+------
+
+A block-level element always starts on a new line.
+
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+A block level element has a top and a bottom margin, whereas an inline element does not.
+
+Here are the block-level elements in HTML:
+
+```
+<address>     <article>     <aside>     <blockquote>     <canvas>     <dd>     <div>     <dl>     <dt>     <fieldset>     <figcaption>     <figure>     <footer>     <form>     <h1>-<h6>     <header>     <hr>     <li>     <main>     <nav>     <noscript>     <ol>     <p>     <pre>     <section>     <table>     <tfoot>     <ul>     <video>
+```
+
+Notwithstanding, an inline element does not start on a new line.
+
+An inline element only takes up as much width as necessary.
+
+Here are the inline elements in HTML:
+
+```
+<a>     <abbr>     <acronym>     <b>     <bdo>     <big>     <br>     <button>     <cite>     <code>     <dfn>     <em>     <i>     <img>     <input>     <kbd>     <label>     <map>     <object>     <output>     <q>     <samp>     <script>     <select>     <small>     <span>     <strong>     <sub>     <sup>     <textarea>     <time>     <tt>     <var>
+```
+
+#### `<div>`
+
+The `<div>` element is often used as a container for other HTML elements.
+
+The `<div>` element has no required attributes, but `style`, `class` and `id` are common.
+
+When used together with CSS, the `<div>` element can be used to style blocks of content:
+
+```html
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+```
+
+#### `<span>`
+
+The `<span>` element is an inline container used to mark up a part of a text, or a part of a document.
+
+The `<span>` element has no required attributes, but `style`, `class` and `id` are common.
+
+When used together with CSS, the `<span>` element can be used to style parts of the text:
+
+```html
+<p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+```
+
+
+
+### Verse 16 - `<class>`
+
+The HTML `class` attribute is used to specify a class for an HTML element.
+
+Multiple HTML elements can share the same class.
+
+#### Using The `<class>` Attribute
+
+The `class` attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+
+In the following example we have three `<div>` elements with a `class` attribute with the value of "city". All of the three `<div>` elements will be styled equally according to the `.city` style definition in the head section. Notice that `<class>` can be used independently and dependently:
+
+> Click here to see an example: [class_example.html](HTML/class_example.html)
+
+#### Summary
+
+- The HTML `class` attribute specifies one or more class names for an element
+- Classes are used by CSS and JavaScript to select and access specific elements
+- The `class` attribute can be used on any HTML element
+- The class name is case sensitive
+- Different HTML elements can point to the same class name
